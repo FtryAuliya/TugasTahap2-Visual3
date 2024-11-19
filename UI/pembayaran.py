@@ -1,14 +1,7 @@
-from PyQt6.QtWidgets import QApplication, QWidget
-import sys
-from PyQt6 import uic
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.uic import loadUi
 
-class FORM_UI(QWidget):
+class formPembayaran(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("pembayaran.ui", self)
-
-app = QApplication(sys.argv)
-window = FORM_UI()
-window.setWindowTitle('Form Pembayaran')
-window.show()
-app.exec()
+        loadUi("pembayaran.ui", self)

@@ -1,14 +1,7 @@
-from PyQt6.QtWidgets import QApplication, QWidget
-import sys
-from PyQt6 import uic
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.uic import loadUi
 
-class FORM_UI(QWidget):
+class formPesan(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("pesanInbox.ui", self)
-
-app = QApplication(sys.argv)
-window = FORM_UI()
-window.setWindowTitle('Form Pesan Inbox')
-window.show()
-app.exec()
+        loadUi("pesanInbox.ui", self)
